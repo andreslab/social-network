@@ -24,18 +24,33 @@
 
 		public function get_picture(){
 			$this->r=$this->session->getPicture();
+			while($show = $this->r->fetch_row()){
+				echo $show[2];
+			}
 		}
 		public function get_userName(){
-			$this->r=$this->session->geUser();
+			$this->r=$this->session->getUser();
+			while($show = $this->r->fetch_row()){
+				echo $show[1]." ".$show[2];
+			}
 		}
 		public function get_description(){
 			$this->r=$this->session->getPicture();
+			while($show = $this->r->fetch_row()){
+				echo $show[1];
+			}
 		}
 		public function get_group(){
-			$this->r=$this->session->getPicture();
+			$this->r=$this->session->getGroup();
+			while($show = $this->r->fetch_row()){
+				echo $show[2];
+			}
 		}
 		public function get_career(){
 			$this->r=$this->session->getCareer();
+			while($show = $this->r->fetch_row()){
+				echo $show[1];
+			}
 		}
 
 		public function set_picture(){}
