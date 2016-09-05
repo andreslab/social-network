@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2016 a las 19:48:38
+-- Servidor: localhost
+-- Tiempo de generación: 05-09-2016 a las 03:57:46
 -- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.21
+-- Versión de PHP: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -74,19 +74,20 @@ CREATE TABLE `docente` (
 CREATE TABLE `foto` (
   `codigo` int(5) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `codigo_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `foto`
 --
 
-INSERT INTO `foto` (`codigo`, `nombre`, `foto`) VALUES
-(6, 'sdsad', 'IMG/2.jpg'),
-(13, 'Monalisa', 'IMG/4.jpg'),
-(14, 'La creacion', 'IMG/3.jpg'),
-(15, 'Chango', 'IMG/8.jpg'),
-(16, 'El tiempo', 'IMG/a.jpg');
+INSERT INTO `foto` (`codigo`, `nombre`, `foto`, `codigo_usuario`) VALUES
+(1, 'sdsad', 'IMG/2.jpg', 1),
+(2, 'Monalisa', 'IMG/4.jpg', 3),
+(3, 'La creacion', 'IMG/3.jpg', 2),
+(4, 'Chango', 'IMG/8.jpg', 3),
+(5, 'El tiempo', 'IMG/a.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -142,6 +143,26 @@ CREATE TABLE `publicacion` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `sesion`
+--
+
+CREATE TABLE `sesion` (
+  `id_user` int(11) NOT NULL,
+  `userMail` varchar(300) NOT NULL,
+  `passUser` varchar(100) NOT NULL,
+  `codigo_usuario` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `sesion`
+--
+
+INSERT INTO `sesion` (`id_user`, `userMail`, `passUser`, `codigo_usuario`) VALUES
+(1, 'xaac19@hotmail.com', '1234', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -160,9 +181,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`codigo_usuario`, `nombre_usuario`, `apellido_usuario`, `correo_usuario`, `clave_usuario`, `codigo_carrera`, `sexo`) VALUES
-(6, 'Diego', 'Lambertucci', 'dj_lambertucci@hotmail.com', '12345', 1, 'M'),
-(8, 'Xavier', 'Aguilar', 'xaac19@hotmail.com', 'xaac', 1, 'M'),
-(10, 'Patsy', 'Quijije', 'laguijije@hotmail.com', 'quijije', 1, 'F');
+(1, 'Diego', 'Lambertucci', 'dj_lambertucci@hotmail.com', '12345', 1, 'M'),
+(2, 'Xavier', 'Aguilar', 'xaac19@hotmail.com', 'xaac', 1, 'M'),
+(3, 'Patsy', 'Quijije', 'laguijije@hotmail.com', 'quijije', 1, 'F');
 
 --
 -- Índices para tablas volcadas
