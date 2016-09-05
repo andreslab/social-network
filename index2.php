@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php 
-	include("Views/sessionInHomeView.php");
+	include("Views/sessionInAccountView.php");
  ?>
 </body>
 </html>

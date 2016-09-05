@@ -1,5 +1,5 @@
 <?php 
-	require("Controllers/sessionInHomeController.php");
+	require("Controllers/sessionOtherUserController.php");
 	
 	echo"<div>";
 		$login=new sessionController();

@@ -14,23 +14,23 @@
 			echo "<br>";
 		}
 
-		public function getCareer(){$data=$this->resp(CARRERA);
+		public function getCareer(){$data=$this->resp(CARRERA_SOH);
 			return $data;}
-		public function getCareerTeacher(){$data=$this->resp(CARRERA_DOCENTE);
+		public function getCareerTeacher(){$data=$this->resp(CARRERA_DOCENTE_SOH);
 			return $data;}
-		public function getTeacher(){$data=$this->resp(DOCENTE);
+		public function getTeacher(){$data=$this->resp(DOCENTE_SOH);
 			return $data;}
-		public function getPicture(){$data=$this->resp(FOTO);
+		public function getPicture(){$data=$this->resp(FOTO_SOH);
 			return $data;}
-		public function getGroup(){$data=$this->resp(GRUPO);
+		public function getGroup(){$data=$this->resp(GRUPO_SOH);
 			return $data;}
-		public function getMembers(){$data=$this->resp(INTEGRANTES_GRUPO);
+		public function getMembers(){$data=$this->resp(INTEGRANTES_GRUPO_SOH);
 			return $data;}
-		public function getMedia(){$data=$this->resp(MEDIA);
+		public function getMedia(){$data=$this->resp(MEDIA_SOH);
 			return $data;}
-		public function getPost(){$data=$this->resp(PUBLICACION);
+		public function getPost(){$data=$this->resp(PUBLICACION_SOH);
 			return $data;}
-		public function getUser(){$data=$this->resp(USUARIO);
+		public function getUser(){$data=$this->resp(USUARIO_SOH);
 			return $data;}
 
 		private function resp($sql){

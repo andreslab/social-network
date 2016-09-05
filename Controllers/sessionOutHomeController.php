@@ -1,6 +1,6 @@
 <?php 	
 	require("controllerStructure.php");
-	require("Models/sessionInHomeModel.php");
+	require("Models/sessionOutHomeModel.php");
 
 
 	class sessionController implements sessionIn{
