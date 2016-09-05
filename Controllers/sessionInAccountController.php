@@ -44,6 +44,8 @@
 			$this->r=$this->session->getGroup();
 			while($show = $this->r->fetch_row()){
 				echo $show[2];
+				echo"<br>";
+				
 			}
 		}
 		public function get_career(){

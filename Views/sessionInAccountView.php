@@ -16,7 +16,7 @@
 		echo "<br>";
 		echo "<br>";
 		echo "nombre grupo<br>";
-		$login->get_userName();
+		$login->get_group();
 		echo "<br>";
 		echo "<br>";
 		echo "nombre carrera<br>";
